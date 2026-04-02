@@ -34,3 +34,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# reference files
+fuseva-*.png
+capture_fuseva.py
+PLAN.md
+memory/
+.env
+Screenshot 1.png
+.claude/
