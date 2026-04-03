@@ -1,0 +1,20 @@
+<svg width="300" height="200" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g3" x1="150" y1="0" x2="150" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="50%" stop-color="#6C3AED"/>
+      <stop offset="100%" stop-color="#4C1D95"/>
+    </linearGradient>
+  </defs>
+  <circle cx="150" cy="100" r="75" stroke="url(#g3)" stroke-width="14" fill="none"/>
+  <!-- Wing flares -->
+  <path d="M75 100 L55 80 L65 75 L80 95Z" fill="url(#g3)" opacity="0.8"/>
+  <path d="M75 100 L55 120 L65 125 L80 105Z" fill="url(#g3)" opacity="0.8"/>
+  <path d="M225 100 L245 80 L235 75 L220 95Z" fill="url(#g3)" opacity="0.8"/>
+  <path d="M225 100 L245 120 L235 125 L220 105Z" fill="url(#g3)" opacity="0.8"/>
+  <!-- Top crown -->
+  <path d="M150 25 L140 10 L150 0 L160 10Z" fill="#8B5CF6"/>
+  <!-- Ring ornaments -->
+  <circle cx="150" cy="25" r="6" fill="#8B5CF6"/>
+  <circle cx="150" cy="175" r="6" fill="#5B21B6"/>
+</svg>

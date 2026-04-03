@@ -1,0 +1,20 @@
+<svg width="80" height="50" viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g3" x1="40" y1="0" x2="40" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="50%" stop-color="#6C3AED"/>
+      <stop offset="100%" stop-color="#4C1D95"/>
+    </linearGradient>
+  </defs>
+  <!-- Bit bar -->
+  <rect x="0" y="0" width="70" height="16" rx="3" fill="url(#g3)"/>
+  <!-- Tooth 1 — tallest -->
+  <rect x="10" y="16" width="16" height="30" rx="3" fill="url(#g3)"/>
+  <rect x="10" y="16" width="8" height="30" rx="3" fill="#A78BFA" opacity="0.2"/>
+  <!-- Tooth 2 — medium -->
+  <rect x="32" y="16" width="16" height="20" rx="3" fill="#5B21B6"/>
+  <rect x="32" y="16" width="8" height="20" rx="3" fill="#A78BFA" opacity="0.2"/>
+  <!-- Tooth 3 — short -->
+  <rect x="54" y="16" width="16" height="12" rx="3" fill="#4C1D95"/>
+  <rect x="54" y="16" width="8" height="12" rx="3" fill="#A78BFA" opacity="0.2"/>
+</svg>

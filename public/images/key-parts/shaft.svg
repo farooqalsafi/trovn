@@ -1,0 +1,22 @@
+<svg width="28" height="195" viewBox="0 0 28 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g3" x1="14" y1="0" x2="14" y2="195" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="50%" stop-color="#6C3AED"/>
+      <stop offset="100%" stop-color="#4C1D95"/>
+    </linearGradient>
+    <linearGradient id="g3glow" x1="14" y1="0" x2="14" y2="195" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="0" width="20" height="195" rx="4" fill="url(#g3)"/>
+  <rect x="4" y="0" width="10" height="195" rx="4" fill="url(#g3glow)" opacity="0.2"/>
+  <!-- Rune lines -->
+  <rect x="0" y="25" width="28" height="4" rx="2" fill="#A78BFA" opacity="0.7"/>
+  <rect x="2" y="55" width="24" height="2" rx="1" fill="#A78BFA" opacity="0.5"/>
+  <rect x="2" y="80" width="24" height="2" rx="1" fill="#A78BFA" opacity="0.4"/>
+  <rect x="0" y="108" width="28" height="4" rx="2" fill="#A78BFA" opacity="0.5"/>
+  <rect x="2" y="140" width="24" height="2" rx="1" fill="#A78BFA" opacity="0.3"/>
+  <rect x="2" y="165" width="24" height="2" rx="1" fill="#A78BFA" opacity="0.3"/>
+</svg>

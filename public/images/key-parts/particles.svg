@@ -1,0 +1,15 @@
+<svg width="300" height="200" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="particleGlow">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+  <circle cx="65" cy="60" r="4" fill="#A78BFA" opacity="0.6" filter="url(#particleGlow)"/>
+  <circle cx="235" cy="70" r="3" fill="#3B82F6" opacity="0.5" filter="url(#particleGlow)"/>
+  <circle cx="80" cy="150" r="3" fill="#8B5CF6" opacity="0.5" filter="url(#particleGlow)"/>
+  <circle cx="225" cy="140" r="4" fill="#6C3AED" opacity="0.4" filter="url(#particleGlow)"/>
+  <circle cx="55" cy="110" r="2" fill="#A78BFA" opacity="0.4" filter="url(#particleGlow)"/>
+  <circle cx="245" cy="100" r="2.5" fill="#3B82F6" opacity="0.3" filter="url(#particleGlow)"/>
+  <circle cx="100" cy="30" r="2" fill="#C4B5FD" opacity="0.5" filter="url(#particleGlow)"/>
+  <circle cx="200" cy="170" r="2" fill="#818CF8" opacity="0.4" filter="url(#particleGlow)"/>
+</svg>
