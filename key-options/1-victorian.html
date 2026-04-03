@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html><head><title>Key Option 1 — Ornate Victorian</title>
+<style>body{margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;background:#fff;font-family:system-ui}h2{color:#0F172A;margin-bottom:0}p{color:#475569;margin-bottom:32px}</style>
+</head><body>
+<h2>Option 1 — Ornate Victorian</h2>
+<p>Antique skeleton key with filigree scrollwork and decorative bow</p>
+<svg width="300" height="500" viewBox="0 0 300 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="150" y1="0" x2="150" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="50%" stop-color="#6C3AED"/>
+      <stop offset="100%" stop-color="#4C1D95"/>
+    </linearGradient>
+    <linearGradient id="shine1" x1="100" y1="0" x2="200" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#6C3AED" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#4C1D95" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="edge1" x1="120" y1="0" x2="180" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5B21B6"/>
+      <stop offset="100%" stop-color="#3B0764"/>
+    </linearGradient>
+    <filter id="glow1"><feGaussianBlur stdDeviation="6" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter>
+  </defs>
+
+  <!-- Outer bow ring -->
+  <circle cx="150" cy="100" r="80" stroke="url(#g1)" stroke-width="16" fill="none"/>
+  <!-- Inner decorative ring -->
+  <circle cx="150" cy="100" r="55" stroke="url(#edge1)" stroke-width="6" fill="none"/>
+  <!-- Inner accent ring -->
+  <circle cx="150" cy="100" r="35" stroke="#8B5CF6" stroke-width="3" fill="none" stroke-dasharray="8 6"/>
+
+  <!-- Filigree scrollwork — top -->
+  <path d="M150 20 C165 5, 185 15, 175 35 C170 45, 155 40, 150 20Z" fill="#8B5CF6" opacity="0.8"/>
+  <path d="M150 20 C135 5, 115 15, 125 35 C130 45, 145 40, 150 20Z" fill="#8B5CF6" opacity="0.8"/>
+
+  <!-- Filigree — sides -->
+  <path d="M70 100 C55 85, 60 65, 80 70 C90 72, 85 90, 70 100Z" fill="#7C3AED" opacity="0.7"/>
+  <path d="M230 100 C245 85, 240 65, 220 70 C210 72, 215 90, 230 100Z" fill="#7C3AED" opacity="0.7"/>
+
+  <!-- Filigree — bottom of bow -->
+  <path d="M150 180 C165 195, 185 185, 175 165 C170 155, 155 160, 150 180Z" fill="#5B21B6" opacity="0.7"/>
+  <path d="M150 180 C135 195, 115 185, 125 165 C130 155, 145 160, 150 180Z" fill="#5B21B6" opacity="0.7"/>
+
+  <!-- Corner ornaments on ring -->
+  <circle cx="150" cy="20" r="7" fill="#8B5CF6"/>
+  <circle cx="150" cy="180" r="7" fill="#5B21B6"/>
+  <circle cx="70" cy="100" r="7" fill="#7C3AED"/>
+  <circle cx="230" cy="100" r="7" fill="#7C3AED"/>
+
+  <!-- Diagonal ornaments -->
+  <circle cx="93" cy="43" r="5" fill="#A78BFA" opacity="0.7"/>
+  <circle cx="207" cy="43" r="5" fill="#A78BFA" opacity="0.7"/>
+  <circle cx="93" cy="157" r="5" fill="#5B21B6" opacity="0.7"/>
+  <circle cx="207" cy="157" r="5" fill="#5B21B6" opacity="0.7"/>
+
+  <!-- Center jewel -->
+  <circle cx="150" cy="100" r="16" fill="url(#g1)" stroke="#A78BFA" stroke-width="2"/>
+  <circle cx="150" cy="100" r="8" fill="#A78BFA"/>
+  <circle cx="147" cy="96" r="3" fill="white" opacity="0.5"/>
+
+  <!-- Shaft -->
+  <rect x="140" y="175" width="20" height="190" rx="4" fill="url(#g1)"/>
+  <rect x="140" y="175" width="10" height="190" rx="4" fill="url(#shine1)"/>
+
+  <!-- Shaft decorative bands -->
+  <rect x="134" y="195" width="32" height="8" rx="4" fill="#5B21B6"/>
+  <rect x="136" y="195" width="14" height="8" rx="4" fill="#7C3AED" opacity="0.5"/>
+  <rect x="137" y="215" width="26" height="5" rx="2.5" fill="#5B21B6" opacity="0.6"/>
+  <rect x="137" y="240" width="26" height="5" rx="2.5" fill="#5B21B6" opacity="0.5"/>
+  <rect x="137" y="265" width="26" height="5" rx="2.5" fill="#5B21B6" opacity="0.4"/>
+  <rect x="134" y="290" width="32" height="8" rx="4" fill="#5B21B6"/>
+  <rect x="137" y="320" width="26" height="5" rx="2.5" fill="#5B21B6" opacity="0.4"/>
+
+  <!-- Ornate collar below bow -->
+  <path d="M132 175 L168 175 L172 190 L128 190 Z" fill="url(#edge1)"/>
+  <rect x="134" y="183" width="32" height="4" rx="2" fill="#A78BFA" opacity="0.3"/>
+
+  <!-- Bit (teeth) — ornate style -->
+  <rect x="140" y="360" width="70" height="18" rx="4" fill="url(#g1)"/>
+  <rect x="140" y="360" width="35" height="18" rx="4" fill="url(#shine1)"/>
+
+  <!-- Tooth 1 — tallest -->
+  <rect x="150" y="378" width="16" height="45" rx="3" fill="url(#g1)"/>
+  <rect x="150" y="378" width="8" height="45" rx="3" fill="url(#shine1)"/>
+  <!-- Tooth 1 notch -->
+  <rect x="150" y="408" width="16" height="5" rx="2" fill="#3B0764" opacity="0.3"/>
+
+  <!-- Tooth 2 -->
+  <rect x="172" y="378" width="16" height="32" rx="3" fill="url(#edge1)"/>
+  <rect x="172" y="378" width="8" height="32" rx="3" fill="url(#shine1)"/>
+
+  <!-- Tooth 3 — shortest -->
+  <rect x="194" y="378" width="16" height="18" rx="3" fill="#5B21B6"/>
+  <rect x="194" y="378" width="8" height="18" rx="3" fill="url(#shine1)"/>
+
+  <!-- Decorative curl at bit end -->
+  <circle cx="202" cy="378" r="4" fill="#7C3AED" opacity="0.6"/>
+</svg>
+</body></html>

@@ -6,16 +6,16 @@ export function Hero3D() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <div className="relative w-[340px] h-[400px] flex items-center justify-center">
+    <div className="relative w-[340px] h-[420px] flex items-center justify-center">
       {/* Glow burst on entrance */}
       <motion.div
         className="absolute inset-0 flex items-center justify-center pointer-events-none"
-        initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0 }}
+        initial={{ opacity: 0 }}
         animate={{ opacity: [0, 0.6, 0] }}
         transition={{ duration: 1.8, delay: 0.3, ease: "easeOut" }}
       >
         <div
-          className="w-64 h-64 rounded-full blur-3xl"
+          className="w-72 h-72 rounded-full blur-3xl"
           style={{
             background:
               "radial-gradient(circle, rgba(108,58,237,0.4) 0%, rgba(59,130,246,0.2) 50%, transparent 70%)",
@@ -57,218 +57,142 @@ export function Hero3D() {
         >
           <svg
             width="260"
-            height="340"
-            viewBox="0 0 260 340"
+            height="380"
+            viewBox="0 0 300 430"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <defs>
-              {/* Main gradient — purple to blue */}
-              <linearGradient
-                id="keyGradient"
-                x1="130"
-                y1="0"
-                x2="130"
-                y2="340"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop offset="0%" stopColor="#8B5CF6" />
-                <stop offset="50%" stopColor="#6C3AED" />
-                <stop offset="100%" stopColor="#4C1D95" />
+              <linearGradient id="g3" x1="150" y1="0" x2="150" y2="430" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stopColor="#8B5CF6"/>
+                <stop offset="50%" stopColor="#6C3AED"/>
+                <stop offset="100%" stopColor="#4C1D95"/>
               </linearGradient>
-
-              {/* Highlight gradient for shine */}
-              <linearGradient
-                id="keyShine"
-                x1="80"
-                y1="0"
-                x2="180"
-                y2="340"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop offset="0%" stopColor="#A78BFA" stopOpacity="0.6" />
-                <stop offset="40%" stopColor="#7C3AED" stopOpacity="0.1" />
-                <stop offset="100%" stopColor="#4C1D95" stopOpacity="0" />
+              <linearGradient id="g3glow" x1="150" y1="0" x2="150" y2="430" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stopColor="#A78BFA"/>
+                <stop offset="100%" stopColor="#3B82F6"/>
               </linearGradient>
-
-              {/* Dark edge gradient */}
-              <linearGradient
-                id="keyEdge"
-                x1="100"
-                y1="50"
-                x2="160"
-                y2="300"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop offset="0%" stopColor="#5B21B6" />
-                <stop offset="100%" stopColor="#3B0764" />
-              </linearGradient>
-
-              {/* Glow filter */}
-              <filter id="keyGlow" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur stdDeviation="4" result="blur" />
-                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              <filter id="outerGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feFlood floodColor="#6C3AED" floodOpacity="0.4"/>
+                <feComposite in2="blur" operator="in"/>
+                <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="particleGlow">
+                <feGaussianBlur stdDeviation="3"/>
               </filter>
             </defs>
 
-            {/* ===== KEY BOW (ornate handle) ===== */}
-            {/* Outer ring */}
-            <circle
-              cx="130"
-              cy="85"
-              r="70"
-              stroke="url(#keyGradient)"
-              strokeWidth="18"
-              fill="none"
+            {/* Outer glow aura rings */}
+            <circle cx="150" cy="100" r="100" fill="none" stroke="#8B5CF6" strokeWidth="2" opacity="0.15"/>
+            <circle cx="150" cy="100" r="115" fill="none" stroke="#A78BFA" strokeWidth="1" opacity="0.08"/>
+
+            {/* Floating particles */}
+            <motion.circle
+              cx="65" cy="60" r="4" fill="#A78BFA"
+              animate={prefersReducedMotion ? {} : { opacity: [0.6, 0.2, 0.6], cy: [60, 50, 60] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             />
-            {/* Inner ring */}
-            <circle
-              cx="130"
-              cy="85"
-              r="42"
-              stroke="url(#keyEdge)"
-              strokeWidth="8"
-              fill="none"
+            <motion.circle
+              cx="235" cy="70" r="3" fill="#3B82F6"
+              animate={prefersReducedMotion ? {} : { opacity: [0.5, 0.15, 0.5], cy: [70, 58, 70] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
             />
-            {/* Center ornament — diamond */}
-            <motion.rect
-              x="118"
-              y="73"
-              width="24"
-              height="24"
-              rx="3"
-              fill="url(#keyGradient)"
-              stroke="#A78BFA"
-              strokeWidth="2"
-              style={{ transformOrigin: "130px 85px" }}
-              animate={
-                prefersReducedMotion
-                  ? {}
-                  : { rotate: [0, 360] }
-              }
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "linear",
-              }}
+            <motion.circle
+              cx="80" cy="150" r="3" fill="#8B5CF6"
+              animate={prefersReducedMotion ? {} : { opacity: [0.5, 0.15, 0.5], cy: [150, 140, 150] }}
+              transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
             />
-            {/* Inner diamond */}
-            <motion.rect
-              x="123"
-              y="78"
-              width="14"
-              height="14"
-              rx="2"
-              fill="#A78BFA"
-              style={{ transformOrigin: "130px 85px" }}
-              animate={
-                prefersReducedMotion
-                  ? {}
-                  : { rotate: [0, -360] }
-              }
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "linear",
-              }}
+            <motion.circle
+              cx="225" cy="140" r="4" fill="#6C3AED"
+              animate={prefersReducedMotion ? {} : { opacity: [0.4, 0.1, 0.4], cy: [140, 128, 140] }}
+              transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+            />
+            <motion.circle
+              cx="55" cy="110" r="2" fill="#A78BFA"
+              animate={prefersReducedMotion ? {} : { opacity: [0.4, 0.1, 0.4], cx: [55, 50, 55] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+            />
+            <motion.circle
+              cx="245" cy="100" r="2.5" fill="#3B82F6"
+              animate={prefersReducedMotion ? {} : { opacity: [0.3, 0.1, 0.3], cx: [245, 250, 245] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+            />
+            <motion.circle
+              cx="100" cy="30" r="2" fill="#C4B5FD"
+              animate={prefersReducedMotion ? {} : { opacity: [0.5, 0.15, 0.5], cy: [30, 22, 30] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+            />
+            <motion.circle
+              cx="200" cy="170" r="2" fill="#818CF8"
+              animate={prefersReducedMotion ? {} : { opacity: [0.4, 0.1, 0.4], cy: [170, 162, 170] }}
+              transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
             />
 
-            {/* Decorative dots on bow ring */}
-            <circle cx="130" cy="15" r="5" fill="#8B5CF6" />
-            <circle cx="130" cy="155" r="5" fill="#5B21B6" />
-            <circle cx="60" cy="85" r="5" fill="#7C3AED" />
-            <circle cx="200" cy="85" r="5" fill="#7C3AED" />
+            {/* Main key with glow filter */}
+            <g filter="url(#outerGlow)">
+              {/* Bow — ornate circle with flares */}
+              <circle cx="150" cy="100" r="75" stroke="url(#g3)" strokeWidth="14" fill="none"/>
 
-            {/* Corner ornaments */}
-            <circle cx="81" cy="36" r="4" fill="#8B5CF6" opacity="0.7" />
-            <circle cx="179" cy="36" r="4" fill="#8B5CF6" opacity="0.7" />
-            <circle cx="81" cy="134" r="4" fill="#5B21B6" opacity="0.7" />
-            <circle cx="179" cy="134" r="4" fill="#5B21B6" opacity="0.7" />
+              {/* Wing flares on bow */}
+              <path d="M75 100 L55 80 L65 75 L80 95Z" fill="url(#g3)" opacity="0.8"/>
+              <path d="M75 100 L55 120 L65 125 L80 105Z" fill="url(#g3)" opacity="0.8"/>
+              <path d="M225 100 L245 80 L235 75 L220 95Z" fill="url(#g3)" opacity="0.8"/>
+              <path d="M225 100 L245 120 L235 125 L220 105Z" fill="url(#g3)" opacity="0.8"/>
 
-            {/* ===== SHAFT ===== */}
-            <rect
-              x="121"
-              y="150"
-              width="18"
-              height="130"
-              rx="4"
-              fill="url(#keyGradient)"
-            />
-            {/* Shaft highlight */}
-            <rect
-              x="121"
-              y="150"
-              width="9"
-              height="130"
-              rx="4"
-              fill="url(#keyShine)"
-            />
-            {/* Shaft ring details */}
-            <rect x="116" y="168" width="28" height="6" rx="3" fill="#5B21B6" />
-            <rect x="116" y="182" width="28" height="4" rx="2" fill="#5B21B6" opacity="0.6" />
-            <rect x="116" y="220" width="28" height="4" rx="2" fill="#5B21B6" opacity="0.5" />
-            <rect x="116" y="250" width="28" height="4" rx="2" fill="#5B21B6" opacity="0.4" />
+              {/* Top crown */}
+              <path d="M150 25 L140 10 L150 0 L160 10Z" fill="#8B5CF6"/>
 
-            {/* ===== BIT (teeth) ===== */}
-            {/* Main horizontal bar */}
-            <rect
-              x="121"
-              y="272"
-              width="60"
-              height="16"
-              rx="3"
-              fill="url(#keyGradient)"
-            />
+              {/* Inner ring */}
+              <circle cx="150" cy="100" r="48" stroke="url(#g3glow)" strokeWidth="4" fill="none" opacity="0.6"/>
 
-            {/* Tooth 1 */}
-            <rect
-              x="155"
-              y="288"
-              width="14"
-              height="22"
-              rx="2"
-              fill="url(#keyGradient)"
-            />
+              {/* Rune marks */}
+              <text x="120" y="67" fontSize="12" fill="#A78BFA" opacity="0.7" fontFamily="serif">✦</text>
+              <text x="170" y="67" fontSize="12" fill="#A78BFA" opacity="0.7" fontFamily="serif">✦</text>
+              <text x="120" y="147" fontSize="12" fill="#A78BFA" opacity="0.7" fontFamily="serif">✦</text>
+              <text x="170" y="147" fontSize="12" fill="#A78BFA" opacity="0.7" fontFamily="serif">✦</text>
 
-            {/* Tooth 2 */}
-            <rect
-              x="135"
-              y="288"
-              width="14"
-              height="32"
-              rx="2"
-              fill="url(#keyEdge)"
-            />
+              {/* Center gem — glowing */}
+              <circle cx="150" cy="100" r="20" fill="url(#g3)"/>
+              <circle cx="150" cy="100" r="14" fill="#7C3AED"/>
+              <circle cx="150" cy="100" r="8" fill="#A78BFA"/>
+              <circle cx="147" cy="95" r="4" fill="white" opacity="0.6"/>
+              <circle cx="155" cy="103" r="2" fill="white" opacity="0.3"/>
 
-            {/* Tooth 3 (shortest) */}
-            <rect
-              x="167"
-              y="288"
-              width="14"
-              height="14"
-              rx="2"
-              fill="#5B21B6"
-            />
+              {/* Ring ornaments */}
+              <circle cx="150" cy="25" r="6" fill="#8B5CF6"/>
+              <circle cx="150" cy="175" r="6" fill="#5B21B6"/>
 
-            {/* Tooth highlights */}
-            <rect x="135" y="288" width="7" height="32" rx="2" fill="url(#keyShine)" />
-            <rect x="155" y="288" width="7" height="22" rx="2" fill="url(#keyShine)" />
+              {/* Shaft */}
+              <rect x="140" y="170" width="20" height="195" rx="4" fill="url(#g3)"/>
+              <rect x="140" y="170" width="10" height="195" rx="4" fill="url(#g3glow)" opacity="0.2"/>
 
-            {/* ===== SHINE overlay for metallic feel ===== */}
-            <rect
-              x="121"
-              y="150"
-              width="6"
-              height="130"
-              rx="3"
-              fill="white"
-              opacity="0.08"
-            />
+              {/* Glowing rune lines on shaft */}
+              <rect x="136" y="195" width="28" height="4" rx="2" fill="#A78BFA" opacity="0.7"/>
+              <rect x="138" y="225" width="24" height="2" rx="1" fill="#A78BFA" opacity="0.5"/>
+              <rect x="138" y="250" width="24" height="2" rx="1" fill="#A78BFA" opacity="0.4"/>
+              <rect x="136" y="278" width="28" height="4" rx="2" fill="#A78BFA" opacity="0.5"/>
+              <rect x="138" y="310" width="24" height="2" rx="1" fill="#A78BFA" opacity="0.3"/>
+              <rect x="138" y="335" width="24" height="2" rx="1" fill="#A78BFA" opacity="0.3"/>
+
+              {/* Bit */}
+              <rect x="140" y="358" width="70" height="16" rx="3" fill="url(#g3)"/>
+
+              {/* Teeth */}
+              <rect x="150" y="374" width="16" height="30" rx="3" fill="url(#g3)"/>
+              <rect x="150" y="374" width="8" height="30" rx="3" fill="#A78BFA" opacity="0.2"/>
+
+              <rect x="172" y="374" width="16" height="20" rx="3" fill="#5B21B6"/>
+              <rect x="172" y="374" width="8" height="20" rx="3" fill="#A78BFA" opacity="0.2"/>
+
+              <rect x="194" y="374" width="16" height="12" rx="3" fill="#4C1D95"/>
+              <rect x="194" y="374" width="8" height="12" rx="3" fill="#A78BFA" opacity="0.2"/>
+            </g>
           </svg>
 
           {/* Animated glow ring around the bow */}
           <motion.div
-            className="absolute top-0 left-1/2 -translate-x-1/2 w-[160px] h-[160px] rounded-full pointer-events-none"
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-[180px] h-[180px] rounded-full pointer-events-none"
             style={{
               background:
                 "radial-gradient(circle, rgba(139,92,246,0.15) 0%, transparent 70%)",
@@ -289,7 +213,7 @@ export function Hero3D() {
 
       {/* Ground shadow */}
       <motion.div
-        className="absolute bottom-4 left-1/2 -translate-x-1/2 w-40 h-6 rounded-full blur-xl"
+        className="absolute bottom-2 left-1/2 -translate-x-1/2 w-40 h-6 rounded-full blur-xl"
         style={{ background: "rgba(108,58,237,0.2)" }}
         animate={
           prefersReducedMotion

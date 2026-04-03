@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html><head><title>Key Option 3 — Fantasy / Glowing</title>
+<style>body{margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;background:#fff;font-family:system-ui}h2{color:#0F172A;margin-bottom:0}p{color:#475569;margin-bottom:32px}</style>
+</head><body>
+<h2>Option 3 — Fantasy / Glowing</h2>
+<p>Magical treasure key with glowing aura, rune details, and energy particles</p>
+<svg width="300" height="500" viewBox="0 0 300 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g3" x1="150" y1="0" x2="150" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="50%" stop-color="#6C3AED"/>
+      <stop offset="100%" stop-color="#4C1D95"/>
+    </linearGradient>
+    <linearGradient id="g3glow" x1="150" y1="0" x2="150" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <filter id="outerGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feFlood flood-color="#6C3AED" flood-opacity="0.4"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="particleGlow">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- Outer glow aura -->
+  <circle cx="150" cy="100" r="100" fill="none" stroke="#8B5CF6" stroke-width="2" opacity="0.15"/>
+  <circle cx="150" cy="100" r="115" fill="none" stroke="#A78BFA" stroke-width="1" opacity="0.08"/>
+
+  <!-- Floating particles -->
+  <circle cx="65" cy="60" r="4" fill="#A78BFA" opacity="0.6" filter="url(#particleGlow)"/>
+  <circle cx="235" cy="70" r="3" fill="#3B82F6" opacity="0.5" filter="url(#particleGlow)"/>
+  <circle cx="80" cy="150" r="3" fill="#8B5CF6" opacity="0.5" filter="url(#particleGlow)"/>
+  <circle cx="225" cy="140" r="4" fill="#6C3AED" opacity="0.4" filter="url(#particleGlow)"/>
+  <circle cx="55" cy="110" r="2" fill="#A78BFA" opacity="0.4" filter="url(#particleGlow)"/>
+  <circle cx="245" cy="100" r="2.5" fill="#3B82F6" opacity="0.3" filter="url(#particleGlow)"/>
+  <circle cx="100" cy="30" r="2" fill="#C4B5FD" opacity="0.5" filter="url(#particleGlow)"/>
+  <circle cx="200" cy="170" r="2" fill="#818CF8" opacity="0.4" filter="url(#particleGlow)"/>
+
+  <!-- Main key with glow filter -->
+  <g filter="url(#outerGlow)">
+    <!-- Bow — ornate circle with flares -->
+    <circle cx="150" cy="100" r="75" stroke="url(#g3)" stroke-width="14" fill="none"/>
+
+    <!-- Wing flares on bow -->
+    <path d="M75 100 L55 80 L65 75 L80 95Z" fill="url(#g3)" opacity="0.8"/>
+    <path d="M75 100 L55 120 L65 125 L80 105Z" fill="url(#g3)" opacity="0.8"/>
+    <path d="M225 100 L245 80 L235 75 L220 95Z" fill="url(#g3)" opacity="0.8"/>
+    <path d="M225 100 L245 120 L235 125 L220 105Z" fill="url(#g3)" opacity="0.8"/>
+
+    <!-- Top crown -->
+    <path d="M150 25 L140 10 L150 0 L160 10Z" fill="#8B5CF6"/>
+
+    <!-- Inner ring -->
+    <circle cx="150" cy="100" r="48" stroke="url(#g3glow)" stroke-width="4" fill="none" opacity="0.6"/>
+
+    <!-- Rune marks on inner ring -->
+    <text x="120" y="67" font-size="12" fill="#A78BFA" opacity="0.7" font-family="serif">✦</text>
+    <text x="170" y="67" font-size="12" fill="#A78BFA" opacity="0.7" font-family="serif">✦</text>
+    <text x="120" y="147" font-size="12" fill="#A78BFA" opacity="0.7" font-family="serif">✦</text>
+    <text x="170" y="147" font-size="12" fill="#A78BFA" opacity="0.7" font-family="serif">✦</text>
+
+    <!-- Center gem — glowing -->
+    <circle cx="150" cy="100" r="20" fill="url(#g3)"/>
+    <circle cx="150" cy="100" r="14" fill="#7C3AED"/>
+    <circle cx="150" cy="100" r="8" fill="#A78BFA"/>
+    <circle cx="147" cy="95" r="4" fill="white" opacity="0.6"/>
+    <circle cx="155" cy="103" r="2" fill="white" opacity="0.3"/>
+
+    <!-- Ring ornaments -->
+    <circle cx="150" cy="25" r="6" fill="#8B5CF6"/>
+    <circle cx="150" cy="175" r="6" fill="#5B21B6"/>
+
+    <!-- Shaft -->
+    <rect x="140" y="170" width="20" height="195" rx="4" fill="url(#g3)"/>
+    <rect x="140" y="170" width="10" height="195" rx="4" fill="url(#g3glow)" opacity="0.2"/>
+
+    <!-- Glowing rune lines on shaft -->
+    <rect x="136" y="195" width="28" height="4" rx="2" fill="#A78BFA" opacity="0.7"/>
+    <rect x="138" y="225" width="24" height="2" rx="1" fill="#A78BFA" opacity="0.5"/>
+    <rect x="138" y="250" width="24" height="2" rx="1" fill="#A78BFA" opacity="0.4"/>
+    <rect x="136" y="278" width="28" height="4" rx="2" fill="#A78BFA" opacity="0.5"/>
+    <rect x="138" y="310" width="24" height="2" rx="1" fill="#A78BFA" opacity="0.3"/>
+    <rect x="138" y="335" width="24" height="2" rx="1" fill="#A78BFA" opacity="0.3"/>
+
+    <!-- Bit -->
+    <rect x="140" y="358" width="70" height="16" rx="3" fill="url(#g3)"/>
+
+    <!-- Teeth with glow effect -->
+    <rect x="150" y="374" width="16" height="30" rx="3" fill="url(#g3)"/>
+    <rect x="150" y="374" width="8" height="30" rx="3" fill="#A78BFA" opacity="0.2"/>
+
+    <rect x="172" y="374" width="16" height="20" rx="3" fill="#5B21B6"/>
+    <rect x="172" y="374" width="8" height="20" rx="3" fill="#A78BFA" opacity="0.2"/>
+
+    <rect x="194" y="374" width="16" height="12" rx="3" fill="#4C1D95"/>
+    <rect x="194" y="374" width="8" height="12" rx="3" fill="#A78BFA" opacity="0.2"/>
+  </g>
+</svg>
+</body></html>

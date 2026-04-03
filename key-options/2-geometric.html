@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html><head><title>Key Option 2 — Minimal Geometric</title>
+<style>body{margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;background:#fff;font-family:system-ui}h2{color:#0F172A;margin-bottom:0}p{color:#475569;margin-bottom:32px}</style>
+</head><body>
+<h2>Option 2 — Minimal Geometric</h2>
+<p>Clean modern key with sharp angular shapes and gradient finish</p>
+<svg width="300" height="500" viewBox="0 0 300 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g2" x1="150" y1="0" x2="150" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="g2dark" x1="120" y1="0" x2="180" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5B21B6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="g2light" x1="130" y1="0" x2="170" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Bow — hexagonal shape -->
+  <polygon points="150,15 220,55 220,145 150,185 80,145 80,55" stroke="url(#g2)" stroke-width="14" fill="none" stroke-linejoin="miter"/>
+
+  <!-- Inner hexagon -->
+  <polygon points="150,45 195,70 195,130 150,155 105,130 105,70" stroke="url(#g2dark)" stroke-width="6" fill="none" stroke-linejoin="miter"/>
+
+  <!-- Center — diamond -->
+  <rect x="135" y="85" width="30" height="30" rx="2" fill="url(#g2)" transform="rotate(45 150 100)"/>
+  <rect x="140" y="90" width="20" height="20" rx="1" fill="url(#g2dark)" transform="rotate(45 150 100)"/>
+  <rect x="145" y="95" width="10" height="10" rx="1" fill="#A78BFA" transform="rotate(45 150 100)"/>
+
+  <!-- Corner accents -->
+  <rect x="146" y="11" width="8" height="8" rx="1" fill="#8B5CF6" transform="rotate(45 150 15)"/>
+  <rect x="146" y="181" width="8" height="8" rx="1" fill="#3B82F6" transform="rotate(45 150 185)"/>
+  <rect x="216" y="51" width="8" height="8" rx="1" fill="#7C3AED" transform="rotate(45 220 55)"/>
+  <rect x="76" y="51" width="8" height="8" rx="1" fill="#7C3AED" transform="rotate(45 80 55)"/>
+
+  <!-- Shaft — clean rectangle -->
+  <rect x="140" y="185" width="20" height="190" rx="2" fill="url(#g2)"/>
+  <rect x="140" y="185" width="10" height="190" rx="2" fill="url(#g2light)"/>
+
+  <!-- Shaft accents — geometric lines -->
+  <rect x="136" y="205" width="28" height="3" fill="url(#g2dark)"/>
+  <rect x="138" y="230" width="24" height="2" fill="url(#g2dark)" opacity="0.6"/>
+  <rect x="138" y="255" width="24" height="2" fill="url(#g2dark)" opacity="0.5"/>
+  <rect x="138" y="280" width="24" height="2" fill="url(#g2dark)" opacity="0.4"/>
+  <rect x="136" y="305" width="28" height="3" fill="url(#g2dark)"/>
+  <rect x="138" y="330" width="24" height="2" fill="url(#g2dark)" opacity="0.4"/>
+  <rect x="138" y="350" width="24" height="2" fill="url(#g2dark)" opacity="0.3"/>
+
+  <!-- Bit — angular teeth -->
+  <rect x="140" y="370" width="75" height="16" rx="2" fill="url(#g2)"/>
+  <rect x="140" y="370" width="38" height="16" rx="2" fill="url(#g2light)"/>
+
+  <!-- Tooth 1 — tallest, angular -->
+  <polygon points="148,386 164,386 162,440 150,440" fill="url(#g2)"/>
+  <polygon points="148,386 156,386 154,440 150,440" fill="url(#g2light)"/>
+
+  <!-- Tooth 2 — medium -->
+  <polygon points="172,386 188,386 186,420 174,420" fill="url(#g2dark)"/>
+  <polygon points="172,386 180,386 178,420 174,420" fill="url(#g2light)"/>
+
+  <!-- Tooth 3 — short -->
+  <polygon points="196,386 212,386 210,402 198,402" fill="#3B82F6"/>
+  <polygon points="196,386 204,386 202,402 198,402" fill="url(#g2light)"/>
+</svg>
+</body></html>
