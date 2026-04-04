@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ChatWidget } from "@/components/chat-widget";
+import { SiteWrapper } from "@/components/site-wrapper";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -38,10 +39,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans`}
       >
-        <Navbar />
-        {children}
-        <Footer />
-        <ChatWidget />
+        <SiteWrapper>
+          <Navbar />
+          {children}
+          <Footer />
+          <ChatWidget />
+        </SiteWrapper>
       </body>
     </html>
   );
